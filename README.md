@@ -7,7 +7,8 @@ To do this, you’ll need to know when any team is having a meeting. In HiCal, a
 
 For example:
 
-  (2, 3)  # Meeting from 10:00 – 10:30 am
+(2, 3)  # Meeting from 10:00 – 10:30 am
+
 (6, 9)  # Meeting from 12:00 – 1:30 pm
 
 Write a function merge_ranges() that takes a list of multiple meeting time ranges and returns a list of condensed ranges.
