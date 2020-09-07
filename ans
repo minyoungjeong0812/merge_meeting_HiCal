@@ -1,0 +1,24 @@
+def merge_ranges(input_tuple):
+    sorted_input = sorted(input_tuple)
+
+    new_list=[]
+
+    for x in range(len(sorted_input)):
+        if new_list:
+            if sorted_input[x][1] <= new_list[-1][1] and sorted_input[x][0]>=new_list[-1][0]:
+                continue
+
+            elif sorted_input[x][0] <= new_list[-1][1]:
+                new_list[-1] = (new_list[-1][0],sorted_input[x][1])
+            else:
+                new_list.append(sorted_input[x])
+        else:
+            new_list.append(sorted_input[x])
+
+    print(new_list)
+
+    return new_list
+
+#merge_ranges([(0, 1), (3, 5), (4, 8), (10, 12), (9, 10)])
+#merge_ranges([(1, 10), (2, 6), (3, 5), (7, 9)])
+merge_ranges([(1, 5), (2, 3)])
